@@ -4825,6 +4825,25 @@ limited_link_type_combinations: [
        input_relationship_type: 'patronage',
        only_valid_entity_types: [],
   },
+  // Boosty
+  {
+                     input_url: 'https://boosty.to/example',
+             input_entity_type: 'artist',
+    expected_relationship_type: 'patronage',
+            expected_clean_url: 'https://boosty.to/example',
+  },
+  {
+                     input_url: 'https://www.boosty.to/testuser?param=value',
+             input_entity_type: 'label',
+    expected_relationship_type: 'patronage',
+            expected_clean_url: 'https://boosty.to/testuser',
+  },
+  {
+                     input_url: 'http://boosty.to/artistname/#section',
+             input_entity_type: 'artist',
+    expected_relationship_type: 'patronage',
+            expected_clean_url: 'https://boosty.to/artistname',
+  },
   // PayPal.Me
   {
                      input_url: 'https://paypal.me/example',

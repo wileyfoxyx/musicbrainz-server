@@ -44,6 +44,7 @@ my %URL_SPECIALIZATIONS = (
     'BookBrainz'          => qr{^https?://(?:www\.)?bookbrainz\.org}i,
     'Boomkat'             => qr{^https?://(?:www\.)?boomkat\.com}i,
     'Boomplay'            => qr{^https?://(?:www\.)?boomplay\.com/}i,
+    'Boosty'              => qr{^https?://(?:www\.)?boosty\.to/}i,
     'BrahmsIrcam'         => qr{^https?://brahms\.ircam\.fr/}i,
     'Bugs'                => qr{^https?://music\.bugs\.co\.kr/}i,
     'Canzone'             => qr{^https?://(?:www\.)?discografia\.dds\.it/}i,

@@ -1919,6 +1919,20 @@ export const CLEANUPS: CleanupEntries = {
       return {result: false, target: ERROR_TARGETS.URL};
     },
   },
+  'boosty': {
+    hostname: 'boosty.to',
+    match: [/^(https?:\/\/)?(www\.)?boosty\.to\/[^/?#]/i],
+    restrict: [LINK_TYPES.patronage],
+    clean(url) {
+      return url.replace(/^(?:https?:\/\/)?(?:www\.)?boosty\.to\/([^/?#]+).*$/, 'https://boosty.to/$1');
+    },
+    validate(url) {
+      return {
+        result: /^https?:\/\/boosty\.to\/[^/?#]+$/.test(url),
+        target: ERROR_TARGETS.URL,
+      };
+    },
+  },
   'brahms': {
     hostname: 'brahms.ircam.fr',
     match: [/^(https?:\/\/)?brahms\.ircam\.fr\//i],
